@@ -12,7 +12,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Consumer;
 
-public class Main {
+public class Task2 {
     public static void main(String[] args) {
         System.out.println("--------------Задание №2------------- ");
         System.out.println("--------------через анонимный класс------------- ");

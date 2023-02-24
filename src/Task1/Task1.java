@@ -15,7 +15,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Predicate;
 
-public class Main {
+public class Task1 {
     public static void main(String[] args) {
         System.out.println("--------------Задание №1------------- ");
         System.out.println("--------------через анонимный класс------------- ");
