@@ -26,27 +26,20 @@ import java.util.function.Function;
 import java.util.function.Predicate;
 
 public class Task5 {
-    static String testStr = "does the rose have flowers?";
-
     public static void main(String[] args) {
-
-        System.out.println(replacesStrIf(conditionSubStr("flowers"),function).apply(testStr));
+        //System.out.println(replacesStrIf(conditionSubStr("flowers"),function).apply(testStr));
+        Function<Integer,Integer> function = x-> (int)(Math.random()*100);
+        Function<Integer,Double> function1 = x-> (double) (Math.pow(x,2));
+        Predicate<Integer> predicate = x -> x >= 0;
+        System.out.println(ternaryOperator(predicate, function, function1).apply(-8));
     }
 
-    private static Function<String, String> replacesStrIf(
-            Predicate<String> condition,
-            Function<String, String> function)
-    {
-        return x -> {
-            if (condition.test(x)) {
-                return function.apply(x);
-            }
-            return x;
-        };
+    public static <T,U> Function <T,U> ternaryOperator(Predicate<? super T> condition,
+                                                       Function<? super T, ? extends U> ifTrue,
+                                                       Function<? super T, ? extends U> ifFalse) {
+
+        return x->condition.test(x)? ifTrue.apply(x):ifFalse.apply(x);
     }
-        private static Predicate<String> conditionSubStr(String subStr) {
-        return s -> s.contains(subStr);
-        }
-        private static Predicate<String> condition = t -> t.startsWith(testStr);
-        private static Function<String, String> function = s -> s.replace("flowers","thorns");
 }
+
+
