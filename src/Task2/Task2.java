@@ -6,7 +6,6 @@ package Task2;
 Consumer корректно реализован через анонимный класс.
 Consumer корректно реализован через лямбда-выражение.
  */
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Consumer;
