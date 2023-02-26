@@ -5,7 +5,6 @@ package Task2;
 Критерии проверки
 Consumer корректно реализован через анонимный класс.
 Consumer корректно реализован через лямбда-выражение.
-
  */
 
 import java.util.ArrayList;
@@ -37,16 +36,23 @@ public class Task2 {
             System.out.println(person);
         }
 
-        System.out.println("----------Приветствие и именем -----------");
+        System.out.println("----------Приветствие c именем -----------");
         Consumer<Person> consumer = new Consumer<Person>() {
             @Override
             public void accept(Person person) {
-                System.out.println("Привет, " + person.getName()+" ! ");
+                System.out.println("Привет, " + person.getName() + " ! ");
             }
         };
 
         for (Person person : people) {
             consumer.accept(person);
+        }
+        System.out.println("--------------Задание №2------------- ");
+        System.out.println("--------------через лямбду------------- ");
+
+        Consumer<String> consumer1 = s -> System.out.println("Приветствую тебя, " + s + " ! ");
+        for (Person s : people) {
+            consumer1.accept(s.getName());
         }
     }
 }

@@ -38,5 +38,13 @@ public class Task3 {
         for (int i=0; i< meaning.size();i++) {
             System.out.println(function.apply(meaning.get(i)));
         }
+        System.out.println("--------------Задание №3------------- ");
+        System.out.println("--------------через лямбду------------- ");
+        Function<Double, Long> function1 = s -> Math.round(s);
+        for (int i=0; i< meaning.size();i++) {
+            System.out.println(function.apply(meaning.get(i)));
+        }
+
     }
+
 }

@@ -35,15 +35,22 @@ public class Task1 {
         Predicate<Integer> predicate = new Predicate<Integer>() {
             @Override
             public boolean test(Integer meaning) {
-                return meaning >= 0;
+                if(meaning >= 0){
+                    return true;
+                }return false;
             }
         };
         for (int i=0; i< meaning.size();i++) {
             System.out.println(predicate.test(meaning.get(i)));
         }
 
-        System.out.println("--------------Задание №2------------- ");
+        System.out.println("--------------Задание №1------------- ");
         System.out.println("--------------через лямбду------------- ");
+
+        Predicate<Integer> predicate2 = x -> x >= 0;
+        for (int i=0; i< meaning.size();i++) {
+            System.out.println(predicate2.test(meaning.get(i)));
+        }
     }
 
 }
