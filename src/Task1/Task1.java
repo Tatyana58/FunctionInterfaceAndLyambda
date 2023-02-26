@@ -40,6 +40,7 @@ public class Task1 {
                 }return false;
             }
         };
+
         for (int i=0; i< meaning.size();i++) {
             System.out.println(predicate.test(meaning.get(i)));
         }
